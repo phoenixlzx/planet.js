@@ -18,6 +18,10 @@ pre {
     white-space: pre;
 }
 
+code {
+    word-wrap: break-word;
+}
+
 img {
     max-width: 100%;
 }
