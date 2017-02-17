@@ -2,7 +2,10 @@
   "name": "planet.js",
   "version": "0.0.1",
   "description": "river of news nodejs implementation",
-  "main": "planet.js",
+  "bin": {
+    "planet": "./bin/planet"
+  },
+  "main": "lib/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,8 +34,11 @@
     "iconv": "^2.2.1",
     "js-yaml": "^3.8.1",
     "minimist": "^1.2.0",
+    "moment": "^2.17.1",
     "ncp": "^2.0.0",
     "request": "^2.79.0",
-    "rss": "^1.2.2"
-  }
+    "rss": "^1.2.2",
+    "sanitize-html": "^1.14.1"
+  },
+  "preferGlobal": true
 }

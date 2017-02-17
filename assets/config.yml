@@ -1,0 +1,82 @@
+# planet.js configuration
+
+planet:
+  name: Planet Example # Site title
+  tagline: Here's your tagline under title # Site tagline
+  description: Yet another planet site # Site description
+  link: https://planet.example.com # Site link
+  locale: en # Site locale
+  owner_name: Joe Doe # Your name
+  owner_email: joe@example.com # Your email
+  theme: pure # theme under templates directory
+  output: public # output directory, make sure your web server can read in this place
+  timeout: 30 # request timeout in seconds
+  items: 100 # how many posts should be displayed?
+
+secure:
+  allowedTags:
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  - h6
+  - blockquote
+  - p
+  - a
+  - ul
+  - ol
+  - nl
+  - li
+  - b
+  - i
+  - s
+  - g
+  - strong
+  - em
+  - strike
+  - pre
+  - code
+  - kbd
+  - hr
+  - br
+  - div
+  - table
+  - thead
+  - tbody
+  - tr
+  - th
+  - td
+  - caption
+  - img
+  - sup
+  - sub
+  - span
+  - font
+  - style
+  - svg
+  - defs
+  - path
+  - use
+  allowedAttributes:
+    a:
+    - href
+    - name
+    - target
+    img:
+    - src
+  selfClosing:
+  - img
+  - br
+  - hr
+  allowedSchemes:
+  - http
+  - https
+  - ftp
+  - mailto
+  allowProtocolRelative: true
+
+people:
+- name: Example Google News Feed
+  link: https://news.google.com/news?output=rss
+  avatar: images/akarin.jpg # available types: file path, gravatar email, image uri, or just leave blank
