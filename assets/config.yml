@@ -12,9 +12,13 @@ planet:
   output: public # output directory, make sure your web server can read in this place
   timeout: 30 # request timeout in seconds
   items: 100 # how many posts should be displayed?
+  display_length: 2000 # posts longer than this characters, a summary will be displayed (if available)
+  time_format: MMMM Do YYYY h:mm:ss A # See http://momentjs.com/docs/#/displaying/ for details
+  ttl: 120 # TimeToLive minutes to cache site feed
 
 secure:
-  allowedTags:
+  proxy: # Leave blank if you don't use an http proxy
+  allowedTags: # set to true to allow any tags, or [] to disallow any.
   - h1
   - h2
   - h3
@@ -79,4 +83,4 @@ secure:
 people:
 - name: Example Google News Feed
   link: https://news.google.com/news?output=rss
-  avatar: images/akarin.jpg # available types: file path, gravatar email, image uri, or just leave blank
+  avatar: images/akarin.jpg # available types: file path, gravatar email, http(s) image uri, or just leave blank

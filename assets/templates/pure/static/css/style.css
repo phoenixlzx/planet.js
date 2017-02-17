@@ -12,9 +12,20 @@ pre, code, kbd {
     font-family: 'Source Code Pro', 'Noto Sans Mono', 'Consolas', 'Monaco', 'Menlo', 'Dejavu Sans Mono', monospace;
 }
 
+pre, blockquote {
+    display: block;
+    overflow: auto;
+    white-space: pre;
+}
+
+img {
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
     color: rgb(61, 146, 201);
+    overflow: hidden;
 }
 a:hover,
 a:focus {
@@ -105,7 +116,7 @@ h3 {
     padding-bottom: 2em;
 }
 .post-title {
-    font-size: 2em;
+    font-size: 1.6em;
     color: #222;
     margin-bottom: 0.2em;
 }
@@ -160,8 +171,9 @@ h3 {
     padding: 1em 0;
 }
 .footer a {
-    color: #ccc;
+    color: #777;
     font-size: 80%;
+    display: inline;
 }
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
@@ -172,6 +184,21 @@ h3 {
     white-space: normal !important;
 }
 
+@media screen and (max-width: 1280px) {
+    pre {
+        max-width: 750px;
+    }
+}
+@media screen and (max-width: 840px) {
+    pre {
+        max-width: 450px;
+    }
+}
+@media screen and (max-width: 480px) {
+    pre {
+        max-width: 250px;
+    }
+}
 @media (min-width: 48em) {
     .content {
         padding: 2em 3em 0;

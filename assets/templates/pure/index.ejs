@@ -6,9 +6,9 @@
     <meta name="description" content="<%= config['planet'].description %>">
     <title><%= config['planet'].name %></title>
     <link rel="stylesheet" href="css/pure.min.css">
-    <link rel="stylesheet" href="css/highlightjs.tomorrow.css">
     <link rel="stylesheet" href="css/grids-responsive-min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/highlight.min.js"></script>
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -34,8 +34,18 @@
                     posts.forEach(function (p) {
                 %>
                 <section class="post">
+                    <p class="post-meta">
+                        <span class="post-author"><%= p.date %></span>
+                        <% if (p.update && p.update !== p.date) { %>
+                        <span class="post-author">// Update <%= p.update %></span>
+                        <% } %>
+                    </p>
                     <header class="post-header">
+                        <% if (p.avatar) { %>
                         <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" src="<%= p.avatar %>">
+                        <% } else { %>
+                        <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" src="img/akarin.jpg">
+                        <% } %>
                         <h2 class="post-title"><a href="<%= p.link %>" class="post-title"><%= p.title %></a></h2>
                         <p class="post-meta">
                             <span class="post-author"><%= p.author %></span>
@@ -59,7 +69,7 @@
             <div class="footer">
                 <div class="pure-menu pure-menu-horizontal people-list">
                     <ul>
-                        <% people.forEach(function(s) { %>
+                        <% config['people'].forEach(function(s) { %>
                         <li class="pure-menu-item">[<a href="<%= s.link %>" class="pure-menu-link"><%= s.name %></a>]</li>
                         <% }) %>
                     </ul>
@@ -67,6 +77,9 @@
             </div>
         </div>
     </div>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
 </div>
 </body>
 </html>
