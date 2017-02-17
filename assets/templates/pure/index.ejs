@@ -31,7 +31,9 @@
                 <h1 class="content-subhead">Recent Posts</h1>
                 <%
                     var cstyles = 'abcd';
-                    posts.forEach(function (p) {
+                    var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
+                    for (var i = 0; i < limit; i++) {
+                      var p = posts[i];
                 %>
                 <section class="post">
                     <p class="post-meta">
@@ -61,7 +63,7 @@
                         <%- p.content %>
                     </div>
                 </section>
-                <% }) %>
+                <% } %>
             </div>
             <div class="posts">
                 <h1 class="content-subhead">via these people and places</h1>
