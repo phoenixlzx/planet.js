@@ -199,8 +199,12 @@ h3 {
     }
 }
 @media screen and (max-width: 480px) {
+    * {
+        word-break: break-all;
+    }
     pre {
         max-width: 250px;
+        word-break: keep-all;
     }
 }
 @media (min-width: 48em) {
