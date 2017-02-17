@@ -1,0 +1,38 @@
+{
+  "name": "planet.js",
+  "version": "0.0.1",
+  "description": "river of news nodejs implementation",
+  "main": "planet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phoenixlzx/planet.js.git"
+  },
+  "keywords": [
+    "planet",
+    "rss",
+    "feed",
+    "aggregator",
+    "planet"
+  ],
+  "author": "Phoenix Nemo <me@v9.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phoenixlzx/planet.js/issues"
+  },
+  "homepage": "https://github.com/phoenixlzx/planet.js#readme",
+  "dependencies": {
+    "async": "^2.1.4",
+    "ejs": "^2.5.6",
+    "feedparser": "^2.1.0",
+    "fs-extra": "^2.0.0",
+    "iconv": "^2.2.1",
+    "js-yaml": "^3.8.1",
+    "minimist": "^1.2.0",
+    "ncp": "^2.0.0",
+    "request": "^2.79.0",
+    "rss": "^1.2.2"
+  }
+}
