@@ -60,7 +60,12 @@
                         </p>
                     </header>
                     <div class="post-description">
+                        <% if (p.content.length > config['planet'].display_length && p.summary) { %>
+                        <%- p.summary %>
+                        <p>[<em><a href="p.link">Continue reading...</a></em>]</p>
+                        <% } else { %>
                         <%- p.content %>
+                        <% } %>
                     </div>
                 </section>
                 <% } %>
