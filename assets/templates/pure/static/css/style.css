@@ -12,7 +12,7 @@ pre, code, kbd {
     font-family: 'Source Code Pro', 'Noto Sans Mono', 'Consolas', 'Monaco', 'Menlo', 'Dejavu Sans Mono', monospace;
 }
 
-pre, blockquote {
+pre {
     display: block;
     overflow: auto;
     white-space: pre;
