@@ -62,7 +62,7 @@
                     <div class="post-description">
                         <% if (p.content.length > config['planet'].display_length && p.summary) { %>
                         <%- p.summary %>
-                        <div><p class="post-meta">[<em><a href="p.link">Continue reading...</a></em>]</p></div>
+                        <div><p class="post-meta">[<em><a href="<%= p.link %>">Continue reading...</a></em>]</p></div>
                         <% } else { %>
                         <%- p.content %>
                         <% } %>
