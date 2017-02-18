@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title><%= config['planet'].name %></title>
+        <link><%= config['planet'].link %></link>
+        <atom:link href="<%= config['planet'].link + '/rss.xml' %>" rel="self" type="application/rss+xml"/>
+        <description><%= config['planet'].description %></description>
+        <pubDate><%= new Date(posts[0]._u * 1000) %></pubDate>
+        <generator>Planet.js (https://github.com/phoenixlzx/planet.js)</generator>
+        <% posts.forEach(function(post) { %>
+        <item>
+            <title><%= post.title %></title>
+            <link><%= post.link %></link>
+            <guid><%= post.link %></guid>
+            <pubDate><%= new Date(post._u * 1000) %></pubDate>
+            <description>
+                <% if (post.summary) { %>
+                <%- post.summary %>
+                <% } else { %>
+                <%- post.content %>
+                <% } %>
+            </description>
+            <% if (post.content) { %>
+            <content:encoded><![CDATA[<%- post.content %>]]></content:encoded>
+            <% } %>
+        </item>
+        <% }) %>
+    </channel>
+</rss>
