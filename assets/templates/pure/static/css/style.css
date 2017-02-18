@@ -187,7 +187,11 @@ h3 {
 .people-list {
     white-space: normal !important;
 }
-
+@media screen and (min-width: 1280px) {
+    pre {
+        max-width: 750px;
+    }
+}
 @media screen and (max-width: 1280px) {
     pre {
         max-width: 750px;
@@ -209,10 +213,6 @@ h3 {
     }
 }
 @media (min-width: 48em) {
-    pre {
-        max-width: 85rem;
-    }
-
     .content {
         padding: 2em 3em 0;
         margin-left: 25%;
