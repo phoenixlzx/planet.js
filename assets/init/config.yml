@@ -4,7 +4,7 @@ planet:
   name: Planet Example # Site title
   tagline: Here's your tagline under title # Site tagline
   description: Yet another planet site # Site description
-  link: https://planet.example.com # Site link
+  link: https://planet.example.com # Site link, do NOT include tailing slash '/'
   locale: en # Site locale
   owner_name: Joe Doe # Your name
   owner_email: joe@example.com # Your email
@@ -12,6 +12,7 @@ planet:
   output: public # output directory, make sure your web server can read in this place
   timeout: 30 # request timeout in seconds
   items: 100 # how many posts should be displayed?
+  items_feed: 200 # maximum posts in feed
   display_length: 2000 # posts longer than this characters, a summary will be displayed (if available)
   time_format: MMMM Do YYYY h:mm:ss A # See http://momentjs.com/docs/#/displaying/ for details
   ttl: 120 # TimeToLive minutes to cache site feed
