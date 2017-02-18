@@ -8,7 +8,9 @@ body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Lato", "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", "Helvetica Neue", sans-serif;
 }
 
-pre, code, kbd {
+pre,
+code,
+kbd {
     font-family: 'Source Code Pro', 'Noto Sans Mono', 'Consolas', 'Monaco', 'Menlo', 'Dejavu Sans Mono', monospace;
 }
 
@@ -31,6 +33,7 @@ a {
     color: rgb(61, 146, 201);
     overflow: hidden;
 }
+
 a:hover,
 a:focus {
     text-decoration: underline;
@@ -43,8 +46,8 @@ a.post-title {
 h3 {
     font-weight: 100;
 }
-
 /* LAYOUT CSS */
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -69,9 +72,11 @@ h3 {
 .brand-tagline {
     margin: 0;
 }
+
 .brand-title {
     text-transform: uppercase;
 }
+
 .brand-tagline {
     font-weight: 300;
     color: rgb(176, 202, 219);
@@ -82,11 +87,13 @@ h3 {
     padding: 0;
     list-style: none;
 }
+
 .nav-item {
     display: inline-block;
     *display: inline;
     zoom: 1;
 }
+
 .nav-item a {
     background: transparent;
     border: 2px solid rgb(176, 202, 219);
@@ -96,6 +103,7 @@ h3 {
     text-transform: uppercase;
     font-size: 85%;
 }
+
 .nav-item a:hover,
 .nav-item a:focus {
     border: 2px solid rgb(61, 146, 201);
@@ -119,21 +127,25 @@ h3 {
 .post {
     padding-bottom: 2em;
 }
+
 .post-title {
     font-size: 1.6em;
     color: #222;
     margin-bottom: 0.2em;
 }
+
 .post-avatar {
     border-radius: 50px;
     float: right;
     margin-left: 1em;
 }
+
 .post-description {
     font-family: Georgia, "Cambria", "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", "Helvetica Neue", serif;
     color: #444;
     line-height: 1.8em;
 }
+
 .post-meta {
     color: #999;
     font-size: 90%;
@@ -151,12 +163,15 @@ h3 {
 .post-category-a {
     background: #5aba59;
 }
+
 .post-category-b {
     background: #4d85d1;
 }
+
 .post-category-c {
     background: #8156a7;
 }
+
 .post-category-d {
     background: #df2d4f;
 }
@@ -164,6 +179,7 @@ h3 {
 .post-images {
     margin: 1em 0;
 }
+
 .post-image-meta {
     margin-top: -3.5em;
     margin-left: 1em;
@@ -174,11 +190,13 @@ h3 {
 .footer {
     padding: 1em 0;
 }
+
 .footer a {
     color: #777;
     font-size: 80%;
     display: inline;
 }
+
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
     background: none;
@@ -187,122 +205,48 @@ h3 {
 .people-list {
     white-space: normal !important;
 }
-@media (min-width: 1280px) {
-    pre {
-        max-width: 750px;
-    }
+
+td {
+    max-width: calc(100vw - 5em);
+    overflow-x: auto;
 }
-@media (max-width: 1280px) {
-    pre {
-        max-width: 750px;
-    }
-}
-@media (max-width: 840px) {
-    pre {
-        max-width: 450px;
-    }
+
+div.post-description p, li {
+    max-width: 100%;
+/*    overflow-x: auto; */
 }
 @media (max-width: 480px) {
     * {
         word-break: normal;
         word-wrap: break-word;
     }
-    pre {
-        max-width: 250px;
-        word-break: keep-all;
-    }
 }
+
 @media (min-width: 48em) {
     .content {
         padding: 2em 3em 0;
         margin-left: 25%;
     }
-
+    td {
+        max-width: calc(75vw - 10em);
+        overflow-x: auto;
+    }
     .header {
         margin: 80% 2em 0;
         text-align: right;
     }
-
     .sidebar {
         position: fixed;
         top: 0;
         bottom: 0;
     }
-
     .footer {
         text-align: center;
     }
 }
 
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-  color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-  color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-  color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-  color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-  color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-  color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #8959a8;
-}
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  background: white;
-  color: #4d4d4c;
-  padding: 0.5em;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
+@media screen and (min-width: 80em) {
+    .pure-u-xl-4-5 {
+        width: 75%;
+    }
 }
