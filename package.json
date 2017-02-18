@@ -1,6 +1,6 @@
 {
   "name": "planet.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "river of news nodejs implementation",
   "bin": {
     "planet": "./bin/planet"
