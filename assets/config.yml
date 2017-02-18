@@ -39,6 +39,7 @@ secure:
   - strong
   - em
   - strike
+  - del
   - pre
   - code
   - kbd
