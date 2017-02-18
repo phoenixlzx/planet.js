@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><%= config['planet'].name %></title>
     <% if (config['planet'].tagline) { %><subtitle><%= config['planet'].tagline %></subtitle><% } %>
-    <link href="<%= config['planet'].link + '/atom.xml' %>" rel="self"/>
+    <link href="<%= config['planet'].link + '/atom.xml' %>" rel="self" type="application/atom+xml" />
     <link href="<%= config['planet'].link %>"/>
     <updated><%= posts[0]._t_rfc3339 %></updated>
     <id><%= config['planet'].link %></id>
@@ -28,7 +28,9 @@
         <content type="html"><![CDATA[<%- post.content %>]]></content>
         <% } %>
         <summary type="html">
-            <% if (post.summary) { %>
+            <% if (post.summary_text) { %>
+            <%= post.summary_text %>
+            <% } else if (post.summary) { %>
             <%- post.summary %>
             <% } else { %>
             <%- post.content %>
