@@ -187,22 +187,22 @@ h3 {
 .people-list {
     white-space: normal !important;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
     pre {
         max-width: 750px;
     }
 }
-@media screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
     pre {
         max-width: 750px;
     }
 }
-@media screen and (max-width: 840px) {
+@media (max-width: 840px) {
     pre {
         max-width: 450px;
     }
 }
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     * {
         word-break: normal;
         word-wrap: break-word;
