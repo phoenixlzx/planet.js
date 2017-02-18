@@ -20,8 +20,8 @@
             <guid><%= post.link %></guid>
             <pubDate><%= post._t_rfc822 %></pubDate>
             <description>
-                <% if (post.summary_text) { %>
-                <%= post.summary_text %>
+                <% if (post._summary_text) { %>
+                <%= post._summary_text %>
                 <% } else if (post.summary) { %>
                 <%- post.summary %>
                 <% } else { %>

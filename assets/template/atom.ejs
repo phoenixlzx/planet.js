@@ -28,8 +28,8 @@
         <content type="html"><![CDATA[<%- post.content %>]]></content>
         <% } %>
         <summary type="html">
-            <% if (post.summary_text) { %>
-            <%= post.summary_text %>
+            <% if (post._summary_text) { %>
+            <%= post._summary_text %>
             <% } else if (post.summary) { %>
             <%- post.summary %>
             <% } else { %>
