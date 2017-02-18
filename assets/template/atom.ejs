@@ -4,7 +4,7 @@
     <% if (config['planet'].tagline) { %><subtitle><%= config['planet'].tagline %></subtitle><% } %>
     <link href="<%= config['planet'].link + '/atom.xml' %>" rel="self"/>
     <link href="<%= config['planet'].link %>"/>
-    <updated><%= new Date(posts[0]._u * 1000) %></updated>
+    <updated><%= posts[0]._t_rfc3339 %></updated>
     <id><%= config['planet'].link %></id>
     <% if (config['planet'].owner_name) { %>
     <author>
@@ -13,13 +13,17 @@
     </author>
     <% } %>
     <generator uri="https://github.com/phoenixlzx/planet.js">Planet.js</generator>
-    <% posts.forEach(function (post) { %>
+    <%
+    var limit = config['planet'].items_feed < posts.length && config['planet'].items_feed > 0 ? config['planet'].items_feed : posts.length
+    for (var i = 0; i < limit; i++) {
+        var post = posts[i];
+    %>
     <entry>
         <title><%= post.title %></title>
         <link href="<%= post.link %>"/>
         <id><%= post.link %></id>
-        <published><%= new Date(post._u * 1000) %></published>
-        <updated><%= new Date(post._u * 1000) %></updated>
+        <published><%= post._t_rfc3339 %></published>
+        <updated><%= post._t_rfc3339 %></updated>
         <% if (post.content) { %>
         <content type="html"><![CDATA[<%- post.content %>]]></content>
         <% } %>
@@ -34,5 +38,5 @@
         <category term="<%= category %>"/>
         <% }) %>
     </entry>
-    <% }) %>
+    <% } %>
 </feed>

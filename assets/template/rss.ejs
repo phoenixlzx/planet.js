@@ -7,14 +7,18 @@
         <link><%= config['planet'].link %></link>
         <atom:link href="<%= config['planet'].link + '/rss.xml' %>" rel="self" type="application/rss+xml"/>
         <description><%= config['planet'].description %></description>
-        <pubDate><%= new Date(posts[0]._u * 1000) %></pubDate>
+        <pubDate><%= posts[0]._t_rfc822 %></pubDate>
         <generator>Planet.js (https://github.com/phoenixlzx/planet.js)</generator>
-        <% posts.forEach(function(post) { %>
+        <%
+        var limit = config['planet'].items_feed < posts.length && config['planet'].items_feed > 0 ? config['planet'].items_feed : posts.length
+        for (var i = 0; i < limit; i++) {
+            var post = posts[i];
+        %>
         <item>
             <title><%= post.title %></title>
             <link><%= post.link %></link>
             <guid><%= post.link %></guid>
-            <pubDate><%= new Date(post._u * 1000) %></pubDate>
+            <pubDate><%= post._t_rfc822 %></pubDate>
             <description>
                 <% if (post.summary) { %>
                 <%- post.summary %>
@@ -26,6 +30,6 @@
             <content:encoded><![CDATA[<%- post.content %>]]></content:encoded>
             <% } %>
         </item>
-        <% }) %>
+        <% } %>
     </channel>
 </rss>
