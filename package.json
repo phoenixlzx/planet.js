@@ -1,6 +1,6 @@
 {
   "name": "planet.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "river of news nodejs implementation",
   "bin": {
     "planet": "./bin/planet"
@@ -29,7 +29,6 @@
   "dependencies": {
     "async": "^2.1.4",
     "ejs": "^2.5.6",
-    "feed": "^0.3.1",
     "feedparser": "^2.1.0",
     "fs-extra": "^2.0.0",
     "iconv": "^2.2.1",
