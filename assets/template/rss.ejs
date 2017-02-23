@@ -17,6 +17,9 @@
         <item>
             <title><%= post.title %></title>
             <link><%= post.link %></link>
+            <% if (post.author) { %>
+            <author><%= post.author %></author>
+            <% } %>
             <guid><%= post.link %></guid>
             <pubDate><%= post._t_rfc822 %></pubDate>
             <description>

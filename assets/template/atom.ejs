@@ -22,6 +22,11 @@
         <title><%= post.title %></title>
         <link href="<%= post.link %>"/>
         <id><%= post.link %></id>
+        <% if (post.author)  { %>
+        <author>
+            <name><%= post.author %></name>
+        </author>
+        <% } %>
         <published><%= post._t_rfc3339 %></published>
         <updated><%= post._t_rfc3339 %></updated>
         <% if (post.content) { %>
