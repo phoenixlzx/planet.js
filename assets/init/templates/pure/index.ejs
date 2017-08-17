@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/grids-responsive-min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/highlight.min.js"></script>
+    <% if(config['planet'].lazyload) { %><script src="js/lazyload.min.js"></script> <% } %>
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -66,10 +67,18 @@
                     </header>
                     <div class="post-description">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
-                        <%- p.summary %>
+                          <% if(config['planet'].lazyload) { %>
+                            <%- p.summary.replace(new RegExp('src=','g'),'data-original=') %>
+                          <% } else { %>
+                            <%- p.summary %>
+                          <% } %>
                         <div><p class="post-meta">[<em><a href="<%= p.link %>">Continue reading...</a></em>]</p></div>
                         <% } else { %>
-                        <%- p.content %>
+                          <% if(config['planet'].lazyload) { %>
+                            <%- p.content.replace(new RegExp('src=','g'),'data-original=') %>
+                          <% } else { %>
+                            <%- p.content %>
+                          <% } %>
                         <% } %>
                     </div>
                 </section>
@@ -91,6 +100,7 @@
     </div>
     <script>
         hljs.initHighlightingOnLoad();
+        <% if(config['planet'].lazyload) { %>var myLazyLoad = new LazyLoad();<% } %>
     </script>
 </div>
 </body>

@@ -16,6 +16,7 @@ planet:
   display_length: 2000 # posts longer than this characters, a summary will be displayed (if available)
   time_format: MMMM Do YYYY h:mm:ss A # See http://momentjs.com/docs/#/displaying/ for details
   ttl: 120 # TimeToLive minutes to cache site feed
+  lazyload: false # Use Lazyload for image
 
 secure:
   proxy: # Leave blank if you don't use an http proxy
