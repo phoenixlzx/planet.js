@@ -68,14 +68,14 @@
                     <div class="post-description">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
                           <% if(config['planet'].lazyload) { %>
-                            <%- p.summary.replace('src','data-original') %>
+                            <%- p.summary.replace(new RegExp('src=','g'),'data-original=') %>
                           <% } else { %>
                             <%- p.summary %>
                           <% } %>
                         <div><p class="post-meta">[<em><a href="<%= p.link %>">Continue reading...</a></em>]</p></div>
                         <% } else { %>
                           <% if(config['planet'].lazyload) { %>
-                            <%- p.content.replace('src','data-original') %>
+                            <%- p.content.replace(new RegExp('src=','g'),'data-original=') %>
                           <% } else { %>
                             <%- p.content %>
                           <% } %>
