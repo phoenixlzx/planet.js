@@ -70,10 +70,12 @@ secure:
     - href
     - name
     - target
+    - 'data-*'
     img:
     - src
     - title
     - alt
+    - 'data-*'
   selfClosing:
   - img
   - br
