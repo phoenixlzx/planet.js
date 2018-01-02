@@ -72,6 +72,9 @@ secure:
     - target
     img:
     - src
+    - data-src
+    - title
+    - alt
   selfClosing:
   - img
   - br
