@@ -14,6 +14,7 @@ planet:
   items: 100 # how many posts should be displayed?
   items_feed: 200 # maximum posts in feed
   display_length: 2000 # posts longer than this characters, a summary will be displayed (if available)
+  post_update: false # use post update time in feeds. If enabled, post update date will be used to sort in list
   time_format: MMMM Do YYYY h:mm:ss A # See http://momentjs.com/docs/#/displaying/ for details
   ttl: 120 # TimeToLive minutes to cache site feed
   lazyload: false # Use Lazyload for image
