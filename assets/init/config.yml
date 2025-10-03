@@ -9,6 +9,7 @@ planet:
   owner_name: Joe Doe # Your name
   owner_email: joe@example.com # Your email
   theme: pure # theme under templates directory
+  format: html # html or json
   output: public # output directory, make sure your web server can read in this place
   timeout: 30 # request timeout in seconds
   items: 100 # how many posts should be displayed?
