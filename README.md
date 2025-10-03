@@ -5,7 +5,7 @@ Don't ask me why invent another wheel. :-(
 
 ### Requirements
 
-* Node.js >= v4.0.0
+* Node.js >= v22.0.0
 
 ### Installation
 

@@ -61,7 +61,6 @@ secure:
   - sub
   - span
   - font
-  - style
   - svg
   - defs
   - path
