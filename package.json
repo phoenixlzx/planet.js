@@ -7,7 +7,8 @@
   },
   "main": "lib/index",
   "scripts": {
-    "test": "mocha test/feeds.test.js test/generate.test.js"
+    "test": "mocha \"test/*.test.js\"",
+    "build:next": "node themes/next/scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   "preferGlobal": true,
   "devDependencies": {
     "chai": "^6.2.0",
-    "mocha": "^11.7.4"
+    "mocha": "^11.7.4",
+    "sinon": "^19.0.2"
   }
 }
